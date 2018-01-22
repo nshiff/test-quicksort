@@ -9,9 +9,13 @@ class TestQuicksort(TestCase):
         self.qs = Quicksort()
 
 
-    def test_trivial_sort(self):
+    def test_sort_trivial(self):
         baby_list = [42]
         self.assertEqual(baby_list, self.qs.sort(baby_list))
+
+    def test_sort_from_video(self):
+        somelist = [2, 5, 20, 15, 1, 11, 8]
+        self.assertEqual([1, 2, 5, 8, 11, 15, 20], self.qs.sort(somelist))
 
     def test_get_pivot_subscript(self):
         list1 = [42]
