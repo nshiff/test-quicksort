@@ -22,3 +22,19 @@ class TestQuicksort(TestCase):
         self.assertEqual(3, self.qs.get_pivot_subscript(list3))
 
 
+    def test_get_wall_subscript_initial(self):
+        list1 = [42]
+        list2 = [7, 9, 6, 4, 4, 2, 6, 7, 3, 4]
+        list3 = [2, 1, 3, 5]
+        self.assertEqual(0, self.qs.get_wall_subscript_initial(list1))
+        self.assertEqual(0, self.qs.get_wall_subscript_initial(list2))
+        self.assertEqual(0, self.qs.get_wall_subscript_initial(list3))
+
+    def test_get_peek_subscript_initial(self):
+        list1 = [42]
+        list2 = [7, 9, 6, 4, 4, 2, 6, 7, 3, 4]
+        list3 = [2, 1, 3, 5]
+        self.assertEqual(0, self.qs.get_peek_subscript_initial(list1))
+        self.assertEqual(0, self.qs.get_peek_subscript_initial(list2))
+        self.assertEqual(0, self.qs.get_peek_subscript_initial(list3))
+

@@ -1,7 +1,13 @@
 class Quicksort(object):
 
-    def sort(self, list_to_sort):
-        return list_to_sort
+    def sort(self, somelist):
+        return somelist
 
-    def get_pivot_subscript(self, list1):
-        return len(list1) - 1
+    def get_pivot_subscript(self, somelist):
+        return len(somelist) - 1
+
+    def get_wall_subscript_initial(self, somelist):
+        return 0
+
+    def get_peek_subscript_initial(self, somelist):
+        return 0
