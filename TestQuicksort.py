@@ -13,10 +13,6 @@ class TestQuicksort(TestCase):
         baby_list = [42]
         self.assertEqual(baby_list, self.qs.sort(baby_list))
 
-    def test_sort_from_video(self):
-        somelist = [2, 5, 20, 15, 1, 11, 8]
-        self.assertEqual([1, 2, 5, 8, 11, 15, 20], self.qs.sort(somelist))
-
     def test_get_pivot_subscript(self):
         list1 = [42]
         list2 = [7, 9, 6, 4, 4, 2, 6, 7, 3, 4]
@@ -24,7 +20,6 @@ class TestQuicksort(TestCase):
         self.assertEqual(0, self.qs.get_pivot_subscript(list1))
         self.assertEqual(9, self.qs.get_pivot_subscript(list2))
         self.assertEqual(3, self.qs.get_pivot_subscript(list3))
-
 
     def test_get_wall_subscript_initial(self):
         list1 = [42]
@@ -42,3 +37,14 @@ class TestQuicksort(TestCase):
         self.assertEqual(0, self.qs.get_peek_subscript_initial(list2))
         self.assertEqual(0, self.qs.get_peek_subscript_initial(list3))
 
+    def test_sort_from_video(self):
+        somelist = [2, 5, 20, 15, 1, 11, 8]
+        # self.assertEqual([1, 2, 5, 8, 11, 15, 20], self.qs.sort(somelist))
+
+    def test_sort_1(self):
+        somelist = [2, 5, 20]
+        self.assertEqual([2, 5, 20], self.qs.sort(somelist))
+
+    def test_sort_2(self):
+        somelist = [2, 5, 20, 15]
+        self.assertEqual([2, 5, 15, 20], self.qs.sort(somelist))
